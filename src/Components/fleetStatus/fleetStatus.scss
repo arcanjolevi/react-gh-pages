@@ -1,0 +1,221 @@
+#fleet-status-container {
+  position: absolute;
+
+  z-index: 1;
+  right: 20px;
+  bottom: 30px;
+
+  width: 345px;
+  height: 380px;
+  border-radius: 30px;
+
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  #status-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+
+    .status-menu-item:hover {
+      background: #f0f0f0;
+      border-bottom: 2px solid #adadad;
+    }
+
+    .status-menu-item.clicked {
+      background: #fff;
+      border-bottom: 2px solid #f46036;
+      h3 {
+        color: #f46036;
+        opacity: 1;
+      }
+    }
+
+    .status-menu-item {
+      background: #fff;
+
+      width: 50%;
+      height: 50px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+
+      h3 {
+        opacity: 0.6;
+        color: #646464;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+      }
+    }
+  }
+
+  #content {
+    overflow: hidden;
+    width: 100%;
+    height: 330px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    #scroll-zone {
+      overflow: hidden;
+      overflow-y: scroll;
+      width: 100%;
+      height: 330px;
+    }
+  }
+
+  #msg-list {
+    list-style: none;
+    border-top: 1px solid #f0f0f0;
+
+    li:hover {
+      background: rgb(230, 230, 230);
+    }
+
+    li {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 1px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      padding: 0 10px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        margin-right: 10px;
+      }
+
+      #msg-info1 {
+        h3 {
+          font-family: "Roboto", sans-serif;
+          font-size: 12px;
+          color: #505050;
+        }
+
+        p {
+          font-family: "Roboto", sans-serif;
+          font-size: 10px;
+          font-weight: lighter;
+          color: #505050;
+        }
+      }
+
+      #msg-info2 {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-family: "Roboto", sans-serif;
+          font-size: 10px;
+          font-weight: lighter;
+          color: #505050;
+        }
+
+        #msg-ball {
+          width: 15px;
+          height: 15px;
+          background: #f46036;
+          border-radius: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  #vehicles-list {
+    list-style: none;
+    border-top: 1px solid #f0f0f0;
+
+    li:hover {
+      background: rgb(230, 230, 230);
+    }
+
+    li {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 1px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      padding: 0 10px;
+
+      justify-content: space-between;
+
+      cursor: pointer;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          color: #505050;
+          font-family: "Roboto", sans-serif;
+          font-size: 12px;
+        }
+
+        p {
+          color: #505050;
+          font-family: "Roboto", sans-serif;
+          font-size: 10px;
+        }
+      }
+
+      strong {
+        color: #505050;
+        font-family: "Roboto", sans-serif;
+        font-size: 10px;
+      }
+
+      .status-ball {
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  #new-msg-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #f46036;
+    margin-left: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    bottom: 70px;
+    right: 25px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
